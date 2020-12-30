@@ -1323,7 +1323,7 @@ auto DatabaseObject::findAvailableVersion() const -> Version {
 		versions.insert(entry.toInt());
 	}
 	auto result = Version();
-	for (const auto version : versions) {
+	for (const auto &version : versions) {
 		if (result != version) {
 			break;
 		}
